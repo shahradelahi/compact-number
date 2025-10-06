@@ -1,7 +1,7 @@
 {
   "name": "@se-oss/compact-number",
   "version": "0.0.0",
-  "description": "A tiny, fast, tree-shakable, and highly customizable number formatting and unformatting library.",
+  "description": "A lightweight library for compact number formatting and parsing.",
   "keywords": [
     "number",
     "format",

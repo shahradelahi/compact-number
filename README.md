@@ -5,16 +5,16 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](/LICENSE)
 [![Install Size](https://packagephobia.com/badge?p=@se-oss/compact-number)](https://packagephobia.com/result?p=@se-oss/compact-number)
 
-_@se-oss/compact-number_ is a tiny, fast, tree-shakable, and highly customizable number formatting and unformatting library.
+📈 _@se-oss/compact-number_ is a lightweight, fast, and highly customizable library for compact number formatting and parsing, offering robust internationalization support.
 
 ---
 
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [Documentation](#-documentation)
-- [Performance](#-performance)
-- [Tree-Shaking Locales](#-tree-shaking-locales)
 - [Advanced Usage](#-advanced-usage)
+- [Documentation](#-documentation)
+- [Using Locales](#-using-locales)
+- [Performance](#-performance)
 - [Contributing](#-contributing)
 - [License](#license)
 
@@ -80,20 +80,6 @@ console.log(uncompactNumber('-1.23K'));
 // => -1230
 ```
 
-## 🌳 Tree-Shaking Locales
-
-By default, only the `en` locale is registered. To use other locales, you must import and register them. This ensures that unused locales are not included in your final bundle.
-
-```typescript
-import { compactNumber, es, store } from '@se-oss/compact-number';
-
-// Register the Spanish (es) locale
-store.register(es);
-
-console.log(compactNumber(1234, { locale: 'es' }));
-// => 1.2 mil
-```
-
 ## 💡 Advanced Usage
 
 You can dynamically load locales from the `cldr-numbers-full` package instead of bundling them. This is useful for applications that support many languages.
@@ -140,6 +126,20 @@ console.log(compactNumber(54321, { locale: 'fr' })); // French
 ```
 
 **Note:** This function only works in Node.js. It will throw an error in the browser to prevent bundling the entire `cldr-numbers-full` package.
+
+## 🌍 Using Locales
+
+By default, only the `en` locale is registered. To use other locales, you must import and register them. This ensures that unused locales are not included in your final bundle.
+
+```typescript
+import { compactNumber, es, store } from '@se-oss/compact-number';
+
+// Register the Spanish (es) locale
+store.register(es);
+
+console.log(compactNumber(1234, { locale: 'es' }));
+// => 1.2 mil
+```
 
 ## 📚 Documentation
 
