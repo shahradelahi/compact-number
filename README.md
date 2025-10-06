@@ -5,7 +5,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](/LICENSE)
 [![Install Size](https://packagephobia.com/badge?p=@se-oss/compact-number)](https://packagephobia.com/result?p=@se-oss/compact-number)
 
-📈 _@se-oss/compact-number_ is a lightweight, fast, and highly customizable library for compact number formatting and parsing, offering robust internationalization support.
+_@se-oss/compact-number_ is a lightweight, fast, and highly customizable library for compact number formatting and parsing, offering robust internationalization support.
 
 ---
 
@@ -151,9 +151,9 @@ _@se-oss/compact-number_ is designed for speed. Our benchmarks show it's signifi
 
 | Library                    | Operations/second (hz) |
 | :------------------------- | :--------------------- |
-| `@se-oss/compact-number`   | 262,502.87             |
-| `Intl.NumberFormat`        | 22,439.66              |
-| **Performance Difference** | **~11.70x faster**     |
+| `@se-oss/compact-number`   | 274,863.69             |
+| `Intl.NumberFormat`        | 22,298.90              |
+| **Performance Difference** | **~12.33x faster**     |
 
 _Benchmark script: [`src/index.bench.ts`](src/index.bench.ts)_
 
